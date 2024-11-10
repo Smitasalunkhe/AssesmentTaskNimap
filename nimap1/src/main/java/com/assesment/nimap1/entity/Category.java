@@ -23,7 +23,7 @@ public class Category {
     @JsonIgnore
     private List<Product> products;
 
-    // Getters and Setters
+    
     public Long getId() {
         return id;
     }
@@ -56,7 +56,6 @@ public class Category {
         this.products = products;
     }
 
-    // Constructors
     public Category() {
     }
 
