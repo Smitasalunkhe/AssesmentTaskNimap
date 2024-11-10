@@ -21,7 +21,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private Category category; // Do not use @JsonIgnore here to allow category serialization
+    private Category category; 
 
     // Getters and Setters
     public Long getId() {
@@ -64,7 +64,7 @@ public class Product {
         this.category = category;
     }
 
-    // Constructors
+    
     public Product() {
     }
 
