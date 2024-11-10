@@ -28,11 +28,9 @@ public class ProductService {
     }
 
     public Product saveProduct(Product product) {
-        // Ensure the category exists before saving the product
         if (product.getCategory() == null || product.getCategory().getId() == null) {
             throw new IllegalArgumentException("Category ID must be provided");
         }
-        // Fetching the category to ensure it exists in the database
         Category category = categoryService.getCategoryById(product.getCategory().getId());
         product.setCategory(category); // Set the fetched category
         return productRepository.save(product);
